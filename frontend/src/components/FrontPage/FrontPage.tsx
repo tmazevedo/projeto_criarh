@@ -1,9 +1,12 @@
 import React from 'react';
 import logo from './../../../src/assets/login-screen.png';
-import logoCriarh from './../../../src/assets/criarhLogo.png'
-import searchLogo from '../../assets/search.png'
+import logoCriarh from './../../../src/assets/criarhLogo.png';
+import searchLogo from '../../assets/search.png';
+import avaliarLogo from '../../assets/avaliar.png';
+import analiseLogo from '../../assets/analise.png'
 import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 import './FrontPage.css';
 
 class FrontPage extends React.Component {
@@ -35,12 +38,56 @@ class FrontPage extends React.Component {
           <img src={logo} className="firstImage " alt='logo' />
           <div style={{ marginTop: '-600px', marginLeft: '26px' }} >
             <div className="loginBox">
-              <i className="recourseBox"> Entendenda melhor os recursos criativos da sua organização!</i>
-              <Input className="inputEmail" placeholder ="Email" type="email" ></Input>
-              <Input className="inputPassword" placeholder ="Password" type="password" ></Input>
-              <Button className="confirmButton"> Entre </Button>
+              <form noValidate>
+                <i className="recourseBox"> Entendenda melhor os recursos criativos da sua organização!</i>
+                <TextField className="inputEmail"
+                  id="email"
+                  label="Email Address"
+                  name="email"
+                  autoComplete="email"
+                  autoFocus
+                  type="email"
+                  variant="outlined"
+                  margin="normal"
+                  required />
+                <TextField className="inputPassword" variant="outlined"
+                  margin="normal"
+                  required
+                  name="password"
+                  label="Password"
+                  type="password"
+                  id="password"
+                  autoComplete="current-password"
+                />
+                <Button className="confirmButton" type="submit" variant="contained" > Entre </Button>
+                <div className="orClass">
+                  ou
+                </div>
+                <Button className="signinButton" variant="contained"> Cadastre-se </Button>
+              </form>
             </div>
           </div>
+        </div>
+        <div style={{ width: '1440px', height: '225px', backgroundColor: '#FFFFFF' }} />
+        <div className="avaliar">
+          <img src={avaliarLogo} className="avaliarLogo" alt='logo' />
+        </div>
+        <div className="avaliarClass">
+          Avaliar
+        </div>
+        <div className="avaliarText">
+          <br />
+          Sua equipe responde a uma série de perguntas para entender melhor os recursos criativos da sua organização.
+        </div>
+        <div className="analise">
+          <img src={analiseLogo} className="analiseLogo" alt='logo' />
+        </div>
+        <div className="analiseClass">
+          Análise
+        </div>
+        <div className="analiseText">
+          <br/>
+          Acesse um painel personalizado com recomendações baseadas nos resultados de sua equipe, bem como métodos, estudos de caso e ferramentas comprovados.
         </div>
       </div>
     )
