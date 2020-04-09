@@ -187,7 +187,7 @@
   width: 238px;
   height: 238px;
   margin-right: 1057px;
-  margin-left: 145px;
+  margin-left: 250px;
   margin-top: 500px;
   margin-bottom: 867px;
 }
@@ -209,7 +209,7 @@
   line-height: 33px;
   width: 376px;
   text-align: center;
-  margin-left: 75.5px;
+  margin-left: 185px;
   margin-right: 988.5px;
   margin-top: -820px;
 }
@@ -222,7 +222,7 @@
   line-height: 30px;
   width: 376px;
   text-align: center;
-  margin-left: 75.5px;
+  margin-left: 185px;
   margin-right: 988.5px;
   margin-top: 10px;
 }
@@ -233,7 +233,7 @@
   width: 238px;
   height: 238px;
   margin-right: 601px;
-  margin-left: 601px;
+  margin-left: 724px;
   margin-top: -441px;
   margin-bottom: 867px;
 }
@@ -255,8 +255,7 @@
   line-height: 33px;
   width: 376px;
   text-align: center;
-  margin-left: 531.5px;
-  margin-right: 532.5px;
+  margin-left: 653px;
   margin-right: 988.5px;
   margin-top: -823px;
 }
@@ -270,6 +269,112 @@
   width: 376px;
   text-align: center;
   margin-top: -3px;
-  margin-left: 531.5px;
+  margin-left: 653px;
   margin-right: 532.5px;
+}
+
+.acao{
+  background-color: #E5E9F2;
+  border-radius: 100%;
+  width: 238px;
+  height: 238px;
+  margin-right: 601px;
+  margin-left: 1163px;
+  margin-top: -451px;
+  margin-bottom: 867px;
+}
+
+.acaoLogo{
+  width: 138px;
+  height: 138px;
+  margin-left:52px;
+  margin-right: 48px;
+  margin-top: 51px;
+  margin-bottom: 49px;
+}
+
+.acaoClass{
+  color: #47525E;
+  font-family: Lato;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33px;
+  width: 376px;
+  text-align: center;
+  margin-left: 1100px;
+  margin-right: 200px;
+  margin-top: -838px;
+}
+
+.acaoText{
+  color: #8190A5;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  width: 376px;
+  text-align: center;
+  margin-left: 1100px;
+  margin-right: 200px;
+  margin-top: 25px;
+}
+.logoBottom{
+  background-color: #47525E;
+  width: 1600px;
+  height: 337px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 400px;
+}
+
+.logoCriarhBottom{
+  background-color: #8190A5;
+  border-radius: 5px;
+  width: 202px;
+  height: 69px;
+  margin-left: 57.7px;
+  margin-bottom: 206px;
+  margin-right: 1180.5px;
+  margin-top: 68px;
+  position: absolute;
+}
+
+.subscribe{
+  background-color: #FFFFFF !important;
+  border-radius: 5px;
+  width: 253px;
+  height: 50px;
+  position: absolute!important;
+  margin-left: 857.5px!important;
+  margin-bottom: 169.5px!important;
+  margin-right: 329.5px!important;
+  margin-top: 123.5px!important;
+}
+
+.subscribeButton{
+  background-color: #FFFFFF!important;
+  border-radius: 5px;
+  width: 155px;
+  height: 50px;
+  margin-right: 165.5px!important;
+  margin-left: 1119.5px!important;
+  margin-bottom: 169.5px!important;
+  margin-top: 123.5px!important;
+  position: absolute!important;
+
+}
+
+.newsletter{
+  color: #F7F7F7!important;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  width: 215px;
+  text-align: left;
+  margin-left: 857px!important;
+  margin-bottom: 229.5px!important;
+  margin-right: 368px!important;
+  margin-top: 83.5px!important;
+  position: absolute!important;
 }

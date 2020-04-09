@@ -3,7 +3,8 @@ import logo from './../../../src/assets/login-screen.png';
 import logoCriarh from './../../../src/assets/criarhLogo.png';
 import searchLogo from '../../assets/search.png';
 import avaliarLogo from '../../assets/avaliar.png';
-import analiseLogo from '../../assets/analise.png'
+import analiseLogo from '../../assets/analise.png';
+import acao from '../../assets/acao.png';
 import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
@@ -86,8 +87,37 @@ class FrontPage extends React.Component {
           Análise
         </div>
         <div className="analiseText">
-          <br/>
+          <br />
           Acesse um painel personalizado com recomendações baseadas nos resultados de sua equipe, bem como métodos, estudos de caso e ferramentas comprovados.
+        </div>
+        <div className="acao">
+          <img src={acao} className="acaoLogo" alt='logo' />
+        </div>
+        <div className="acaoClass">
+          Ação
+        </div>
+        <div className="acaoText">
+          Trabalhe diretamente no painel Diferença criativa para alavancar ferramentas e métodos, aprimorar estratégias e capturar as próximas etapas em um espaço de equipe colaborativo.
+        </div>
+
+
+        <div className="logoBottom">
+          <div className="newsletter">
+            Get our newsletter
+
+          </div>
+          <img src={logoCriarh} className="logoCriarhBottom" alt='logo' />
+          <TextField
+            className="subscribe"
+            id="email"
+            label="Enter yout Email"
+            name="email"
+            autoComplete="email"
+            autoFocus
+            type="email"
+            variant="outlined"
+            margin="normal" />
+          <Button className="subscribeButton" type="submit" variant="contained">Subscribe</Button>
         </div>
       </div>
     )
