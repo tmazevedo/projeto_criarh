@@ -1,6 +1,6 @@
 
 .firstImage{
-  width: 1600px;
+  width: 100%;
   height: 842px;
 }
 
@@ -318,16 +318,16 @@
   margin-right: 200px;
   margin-top: 25px;
 }
-.logoBottom{
+/* .logoBottom{
   background-color: #47525E;
   width: 1600px;
   height: 337px;
   margin-left: 0;
   margin-right: 0;
   margin-top: 400px;
-}
+} */
 
-.logoCriarhBottom{
+/* .logoCriarhBottom{
   background-color: #8190A5;
   border-radius: 5px;
   width: 202px;
@@ -337,9 +337,9 @@
   margin-right: 1180.5px;
   margin-top: 68px;
   position: absolute;
-}
+} */
 
-.subscribe{
+/* .subscribe{
   background-color: #FFFFFF !important;
   border-radius: 5px;
   width: 253px;
@@ -362,9 +362,9 @@
   margin-top: 123.5px!important;
   position: absolute!important;
 
-}
+} */
 
-.newsletter{
+/* .newsletter{
   color: #F7F7F7!important;
   font-family: Lato;
   font-size: 18px;
@@ -378,3 +378,19 @@
   margin-top: 83.5px!important;
   position: absolute!important;
 }
+
+.homeButton{
+  color: #F7F7F7 !important;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  width: 96px;
+  text-align: left;
+  position: absolute!important;
+  margin-left:313.5px!important;
+  margin-right:1030.5px!important;
+  margin-bottom: 244.5px!important;
+  margin-top: 68.5px! important;
+
+} */

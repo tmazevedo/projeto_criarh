@@ -9,6 +9,7 @@ import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import './FrontPage.css';
+import BlackFooter from '../blackFooter/blackFooter';
 
 class FrontPage extends React.Component {
   render() {
@@ -99,25 +100,8 @@ class FrontPage extends React.Component {
         <div className="acaoText">
           Trabalhe diretamente no painel Diferença criativa para alavancar ferramentas e métodos, aprimorar estratégias e capturar as próximas etapas em um espaço de equipe colaborativo.
         </div>
-
-
-        <div className="logoBottom">
-          <div className="newsletter">
-            Get our newsletter
-
-          </div>
-          <img src={logoCriarh} className="logoCriarhBottom" alt='logo' />
-          <TextField
-            className="subscribe"
-            id="email"
-            label="Enter yout Email"
-            name="email"
-            autoComplete="email"
-            autoFocus
-            type="email"
-            variant="outlined"
-            margin="normal" />
-          <Button className="subscribeButton" type="submit" variant="contained">Subscribe</Button>
+        <div>
+          <BlackFooter/>
         </div>
       </div>
     )
