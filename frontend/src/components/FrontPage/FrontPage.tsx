@@ -10,9 +10,17 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import './FrontPage.css';
 import BlackFooter from '../blackFooter/blackFooter';
+import {useHistory, Redirect} from "react-router-dom";
 
 class FrontPage extends React.Component {
+  
+  chamaLogin = () => {
+    let history = useHistory();
+      history.push("/dashboard");
+   }
+  
   render() {
+
     return (
       <div>
         <div className="logo">
@@ -51,17 +59,18 @@ class FrontPage extends React.Component {
                   type="email"
                   variant="outlined"
                   margin="normal"
-                  required />
+                  // required 
+                  />
                 <TextField className="inputPassword" variant="outlined"
                   margin="normal"
-                  required
+                  // required
                   name="password"
                   label="Password"
                   type="password"
                   id="password"
                   autoComplete="current-password"
                 />
-                <Button className="confirmButton" type="submit" variant="contained" > Entre </Button>
+                <Button className="confirmButton" type="submit" variant="contained" onClick = {this.chamaLogin} > Entre </Button>
                 <div className="orClass">
                   ou
                 </div>
