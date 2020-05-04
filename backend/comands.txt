@@ -1,0 +1,4 @@
+1 - docker-compose up -d (Create a Database on docker)
+
+2 - docker exec -it backend_db_1 psql -U postgres (Go to Database)
+

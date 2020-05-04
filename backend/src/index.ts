@@ -21,3 +21,13 @@ app.listen(port, () => {
     // Success callback
     console.log(`Listening at http://localhost:${port}/`);
 });
+
+const { Pool, Client } = require("pg");
+
+const pool = new Pool({
+  user: "postgres",
+  host: "localhost",
+  database: "criarh",
+  password: "postgres",
+  port: "5432"
+});
