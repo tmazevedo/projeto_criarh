@@ -2,7 +2,7 @@ import React from 'react';
  import logoCriarh from './../../../src/assets/criarhLogo.png';
  import Button from '@material-ui/core/Button';
  import TextField from '@material-ui/core/TextField';
- import './blackFooter.css'
+ import './BlackFooter.css'
  import {
    FaWhatsapp, FaTelegramPlane,
    FaFacebookF, FaInstagram, FaTwitter,

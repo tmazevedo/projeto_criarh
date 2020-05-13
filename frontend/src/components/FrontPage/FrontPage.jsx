@@ -9,7 +9,7 @@ import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import './FrontPage.css';
-import BlackFooter from '../BlackFooter/blackFooter';
+import BlackFooter from '../BlackFooter/BlackFooter';
 import {BrowserRouter as Router,Switch,Route,Link,Redirect,useHistory,useLocation} from "react-router-dom";
 import firebase from '../../firebase';
 
