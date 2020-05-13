@@ -11,6 +11,7 @@ import TextField from '@material-ui/core/TextField';
 import './FrontPage.css';
 import BlackFooter from './../BlackFooter/blackFooter';
 import {useHistory, Redirect} from "react-router-dom";
+import firebase from './../../firebase';
 
 class FrontPage extends React.Component {
   
