@@ -9,17 +9,22 @@ import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import './FrontPage.css';
-import BlackFooter from './../BlackFooter/blackFooter';
-import {useHistory, Redirect} from "react-router-dom";
-import firebase from './../../firebase';
+import BlackFooter from '../BlackFooter/blackFooter';
+import {BrowserRouter as Router,Switch,Route,Link,Redirect,useHistory,useLocation} from "react-router-dom";
+import firebase from '../../firebase';
 
 class FrontPage extends React.Component {
-  
-  chamaLogin = () => {
-    let history = useHistory();
-      history.push("/dashboard");
-   }
-  
+
+  // chamaLogin = () => {
+  //   let history = useHistory();
+  //   history.push("/dashboard");
+  // }
+
+  //  handleClick () {
+  //   let history = useHistory();
+  //   history.push("/dashboard");
+  // }
+
   render() {
 
     return (
@@ -47,7 +52,7 @@ class FrontPage extends React.Component {
         </div>
         <div className="firstImageDiv">
           <img src={logo} className="firstImage " alt='logo' />
-          <div style={{ marginTop: '-600px', marginLeft: '26px',marginRight:'100%' }} >
+          <div style={{ marginTop: '-600px', marginLeft: '26px', marginRight: '100%' }} >
             <div className="loginBox">
               <form noValidate>
                 <i className="recourseBox"> Entendenda melhor os recursos criativos da sua organização!</i>
@@ -60,8 +65,8 @@ class FrontPage extends React.Component {
                   type="email"
                   variant="outlined"
                   margin="normal"
-                  // required 
-                  />
+                // required 
+                />
                 <TextField className="inputPassword" variant="outlined"
                   margin="normal"
                   // required
@@ -71,7 +76,7 @@ class FrontPage extends React.Component {
                   id="password"
                   autoComplete="current-password"
                 />
-                <Button className="confirmButton" type="submit" variant="contained" onClick = {this.chamaLogin} > Entre </Button>
+                <Button className="confirmButton" type="submit" variant="contained"  > Entre </Button>
                 <div className="orClass">
                   ou
                 </div>
@@ -111,7 +116,7 @@ class FrontPage extends React.Component {
           Trabalhe diretamente no painel Diferença criativa para alavancar ferramentas e métodos, aprimorar estratégias e capturar as próximas etapas em um espaço de equipe colaborativo.
         </div>
         <div>
-          <BlackFooter/>
+          <BlackFooter />
         </div>
       </div>
     )
