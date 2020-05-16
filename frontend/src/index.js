@@ -4,7 +4,7 @@ import './index.css';
 import FrontPage from './components/FrontPage/FrontPage';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import DashBoard from './components/dashBoard/dashBoard';
+import DashBoard from './components/dashBoard/DashBoard';
 
 ReactDOM.render(
   (

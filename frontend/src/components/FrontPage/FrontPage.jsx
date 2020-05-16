@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './../../../src/assets/login-screen.png';
 import logoCriarh from './../../../src/assets/criarhLogo.png';
 import searchLogo from '../../assets/search.png';
@@ -10,25 +10,30 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import './FrontPage.css';
 import BlackFooter from '../BlackFooter/BlackFooter';
-import {BrowserRouter as Router,Switch,Route,Link,Redirect,useHistory,useLocation} from "react-router-dom";
+import {Redirect} from "react-router-dom";
 import firebase from '../../firebase';
+
 
 class FrontPage extends React.Component {
 
-  // chamaLogin = () => {
-  //   let history = useHistory();
-  //   history.push("/dashboard");
-  // }
+  state = {
+    redirect: false
+  }
+  setRedirect = () => {
+    this.setState({
+      redirect: true
+    })
+  }
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to='/dashboard' />
+    }
+  }
 
-  //  handleClick () {
-  //   let history = useHistory();
-  //   history.push("/dashboard");
-  // }
-
-  render() {
-
+render() {
     return (
       <div>
+        {this.renderRedirect()}
         <div className="logo">
           <img src={logoCriarh} className="logoCriaRh" alt="logo" />
           <div className="inicioButton">
@@ -55,7 +60,7 @@ class FrontPage extends React.Component {
           <div style={{ marginTop: '-600px', marginLeft: '26px', marginRight: '100%' }} >
             <div className="loginBox">
               <form noValidate>
-                <i className="recourseBox"> Entendenda melhor os recursos criativos da sua organização!</i>
+                <i className="recourseBox"> Entenda melhor os recursos criativos da sua organização!</i>
                 <TextField className="inputEmail"
                   id="email"
                   label="Email Address"
@@ -76,11 +81,11 @@ class FrontPage extends React.Component {
                   id="password"
                   autoComplete="current-password"
                 />
-                <Button className="confirmButton" type="submit" variant="contained"  > Entre </Button>
+                <Button className="confirmButton" type="button" variant="contained" onClick={this.setRedirect}> Entre </Button>
                 <div className="orClass">
                   ou
                 </div>
-                <Button className="signinButton" variant="contained"> Cadastre-se </Button>
+                <Button className="signinButton" variant="contained" > Cadastre-se </Button>
               </form>
             </div>
           </div>
@@ -122,4 +127,5 @@ class FrontPage extends React.Component {
     )
   }
 }
+
 export default FrontPage;
