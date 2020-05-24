@@ -211,7 +211,6 @@ export default function Forms() {
     // End Demographics
     return (
         <div>
-            {console.log(state)}
             {renderRedirect()}
             <FormControl component="fieldset">
                 <FormLabel component="legend">Qual o seu nivel de Escolaridade</FormLabel>
