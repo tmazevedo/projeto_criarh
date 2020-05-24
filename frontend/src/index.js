@@ -1,24 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import FrontPage from './components/FrontPage/FrontPage';
-import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import DashBoard from './components/dashBoard/DashBoard';
+import App from './App';
 
-ReactDOM.render(
-  (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={FrontPage} />
-        <Route path="/dashboard" component={DashBoard} />
-      </Switch>
-    </Router>
-  ),
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// import './index.css';
+// import FrontPage from './components/FrontPage/FrontPage';
+// import * as serviceWorker from './serviceWorker';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import DashBoard from './components/dashBoard/DashBoard';
+
+// import AuthLayout from './pages/_layouts/auth';
+// import DefaultLayout from './pages/_layouts/default';
+
+// ReactDOM.render(
+//   (
+//     <Router>
+//       <Switch>
+//         <Route exact path="/" component={FrontPage} />
+//         <Route path="/dashboard" component={DashBoard} />
+//   <Route path="/auth" render={props => (<AuthLayout>components</AuthLayout>)}/>
+//       </Switch>
+//     </Router>
+//   ),
+//   document.getElementById('root')
+// );
+
+// serviceWorker.unregister();
