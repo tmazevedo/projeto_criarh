@@ -4,7 +4,9 @@ import './index.css';
 import FrontPage from './components/FrontPage/FrontPage';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import DashBoard from './components/dashBoard/DashBoard';
+import DashBoard from './components/dashBoard/dashBoard';
+import Forms from './components/Forms/forms';
+
 
 ReactDOM.render(
   (
@@ -12,6 +14,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" component={FrontPage} />
         <Route path="/dashboard" component={DashBoard} />
+        <Route path ="/forms" component={Forms} />
       </Switch>
     </Router>
   ),

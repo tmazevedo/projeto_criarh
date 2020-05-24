@@ -2,7 +2,7 @@ import React from 'react';
  import logoCriarh from './../../../src/assets/criarhLogo.png';
  import Button from '@material-ui/core/Button';
  import TextField from '@material-ui/core/TextField';
- import './BlackFooter.css'
+ import './blackFooter.css'
  import {
    FaWhatsapp, FaTelegramPlane,
    FaFacebookF, FaInstagram, FaTwitter,
@@ -11,7 +11,7 @@ import React from 'react';
    Link
  } from '@material-ui/core';
 
- class BlackFooter extends React.Component {
+ class blackFooter extends React.Component {
 
    constructor(props) {
      super(props);
@@ -126,4 +126,4 @@ import React from 'react';
    }
 
  }
- export default BlackFooter; 
+ export default blackFooter; 

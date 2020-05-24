@@ -9,7 +9,7 @@ import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import './FrontPage.css';
-import BlackFooter from '../BlackFooter/BlackFooter';
+import BlackFooter from '../BlackFooter/blackFooter';
 import {Redirect} from "react-router-dom";
 import firebase from '../../firebase';
 
@@ -26,7 +26,7 @@ class FrontPage extends React.Component {
   }
   renderRedirect = () => {
     if (this.state.redirect) {
-      return <Redirect to='/dashboard' />
+      return <Redirect to='/forms' />
     }
   }
 
