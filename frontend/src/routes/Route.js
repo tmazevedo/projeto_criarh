@@ -11,7 +11,7 @@ export default function RouteWrapper({
   ...rest 
 }) {
 
-  const signed = false;
+  const signed = true;
 
   if(!signed && isPrivate){
     console.log("Aqui1:" + signed);
