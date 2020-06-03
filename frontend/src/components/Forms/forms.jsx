@@ -10,13 +10,13 @@ import firebase from '../../firebase';
 import { Redirect } from "react-router-dom";
 
 export default function Forms() {
-    
-    const  [state, setState] = React.useState(false);
+
+    const [state, setState] = React.useState(false);
 
 
     const setRedirect = () => {
         setState(true);
-        
+
     }
     const renderRedirect = () => {
         if (state) {
@@ -210,7 +210,7 @@ export default function Forms() {
 
     // End Demographics
     return (
-        <div>
+        <div style={{ overflow: "hidden" ,marginLeft: "21%",marginTop: "3%" ,position:"absolute"}}>
             {renderRedirect()}
             <FormControl component="fieldset">
                 <FormLabel component="legend">Qual o seu nivel de Escolaridade</FormLabel>

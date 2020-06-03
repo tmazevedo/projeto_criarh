@@ -8,6 +8,7 @@ import SignUp from '../pages/SignUp';
 import Dashboard from '../pages/Dashboard';
 import Profile from '../pages/Profile';
 import FrontPage from './../components/FrontPage/FrontPage'
+import Forms from './../components/Forms/forms'
 
 export default function Routes() {
   return(
@@ -15,8 +16,10 @@ export default function Routes() {
       <Route path="/" exact component={FrontPage} />
       <Route path="/register" component={SignUp} />
 
+
       <Route path="/dashboard" component={Dashboard} isPrivate />
       <Route path="/profile" component={Profile} isPrivate />
+      <Route path ="/forms" component ={Forms} isPrivate/>
     </Switch>
   );
 }
