@@ -7,11 +7,12 @@ import SignUp from '../pages/SignUp';
 
 import Dashboard from '../pages/Dashboard';
 import Profile from '../pages/Profile';
+import FrontPage from './../components/FrontPage/FrontPage'
 
 export default function Routes() {
   return(
     <Switch>
-      <Route path="/" exact component={SignIn} />
+      <Route path="/" exact component={FrontPage} />
       <Route path="/register" component={SignUp} />
 
       <Route path="/dashboard" component={Dashboard} isPrivate />

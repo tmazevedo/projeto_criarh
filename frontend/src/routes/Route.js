@@ -11,7 +11,7 @@ export default function RouteWrapper({
   ...rest 
 }) {
 
-  const signed = true;
+  const signed = localStorage.getItem("signed");
 
   if(!signed && isPrivate) {
     console.log("Aqui1:" + signed);
