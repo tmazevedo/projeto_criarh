@@ -48,18 +48,27 @@ import React from 'react';
            {/* <div className="textPlusTexfield">
 
              </div> */}
-           <div className="newsletter">Get our newsletter</div>
+           <div className="newsletter">Acompanhe nossa newsletter</div>
            <div className="row1">
+           {/* <TextField
+          label="Dense"
+          id="margin-dense"
+          defaultValue="Default Value"
+          className={classes.textField}
+          helperText="Some important text"
+          margin="dense"
+        /> */}
+
              <TextField
                className="subscribe"
                id="email"
-               label="Enter your Email"
+               label="Digite seu Email"
                name="email"
                autoComplete="email"
                autoFocus
                type="email"
                variant="outlined"
-             // margin="normal" 
+                margin="dense" 
              />
              <Button className="subscribeButton" type="submit" variant="contained">Subscribe</Button>
            </div>
