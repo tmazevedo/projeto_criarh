@@ -11,7 +11,7 @@ export default function RouteWrapper({
   ...rest 
 }) {
 
-  const signed = true;
+  const signed = false;
 
   if(!signed && isPrivate){
     console.log("Aqui1:" + signed);
@@ -23,7 +23,7 @@ export default function RouteWrapper({
     return <Redirect to="/dashboard" />;
   }
 
-  const Layout = signed ? DefaultLayout : AuthLayout;
+  const Layout = signed ? AuthLayout : DefaultLayout;
 
   return <Route {...rest} render={props =>(
     <Layout>
