@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bd152b70.chunk.css",
+    "main.js": "/static/js/main.dee7098e.chunk.js",
+    "main.js.map": "/static/js/main.dee7098e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8dc0443e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8dc0443e.js.map",
+    "static/js/2.157e4e96.chunk.js": "/static/js/2.157e4e96.chunk.js",
+    "static/js/2.157e4e96.chunk.js.map": "/static/js/2.157e4e96.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.dc017af5901f887f247a8bce7992d25b.js": "/precache-manifest.dc017af5901f887f247a8bce7992d25b.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.bd152b70.chunk.css.map": "/static/css/main.bd152b70.chunk.css.map",
+    "static/js/2.157e4e96.chunk.js.LICENSE.txt": "/static/js/2.157e4e96.chunk.js.LICENSE.txt",
+    "static/media/acao.png": "/static/media/acao.4986dc62.png",
+    "static/media/analise.png": "/static/media/analise.fa27e789.png",
+    "static/media/avaliar.png": "/static/media/avaliar.25461181.png",
+    "static/media/criarhLogo.png": "/static/media/criarhLogo.b0f6c231.png",
+    "static/media/login-screen.png": "/static/media/login-screen.eadede71.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8dc0443e.js",
+    "static/js/2.157e4e96.chunk.js",
+    "static/css/main.bd152b70.chunk.css",
+    "static/js/main.dee7098e.chunk.js"
+  ]
+}
