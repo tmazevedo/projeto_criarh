@@ -7,6 +7,11 @@ import { Container, Content, Profile, Logar } from './styles';
 
 
 function FrontPageHeader() {
+  
+  const saveLocalStorage = () =>{
+    localStorage.setItem("signed",true);
+  }
+  
   return (
     <Container>
       <Content>
@@ -21,25 +26,11 @@ function FrontPageHeader() {
         <aside>
           <Logar>
             <div>
-            <Link to="/dashboard">Entre</Link>
+            <Link to="/dashboard" onClick={saveLocalStorage}>Entre</Link>
             <Link to="/dashboard">Cadastre-se</Link>
             </div>
           </Logar>
         </aside>
-
-        {/* <aside>
-          <Profile>
-            <div>
-              <strong>Bianca Guerra</strong>
-              <Link to="/profile">Meu Perfil</Link>
-            </div>
-            <img
-              src="https://api.adorable.io/avatars/50/abott@adorable.png"
-              alt="Bianca Guerra"
-              />
-          </Profile>
-        </aside> */}
-
       </Content>
     </Container>
   );
