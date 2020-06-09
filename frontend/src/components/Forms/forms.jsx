@@ -210,362 +210,366 @@ export default function Forms() {
 
     // End Demographics
     return (
-        <div style={{ overflow: "hidden" ,marginLeft: "21%",marginTop: "3%" ,position:"absolute"}}>
-            {renderRedirect()}
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Qual o seu nivel de Escolaridade</FormLabel>
-                <br />
-                <RadioGroup value={DemographicsQuestion1} onChange={handleChangeDemographics1}>
-                    <FormControlLabel value="SuperiorComp" control={<Radio />} label="Superior Completo" />
-                    <FormControlLabel value="SuperiorIncomp" control={<Radio />} label="Superior Incompleto" />
-                    <FormControlLabel value="MedioComp" control={<Radio />} label="Ensino Médio Completo" />
-                    <FormControlLabel value="MedioIncomp" control={<Radio />} label="Ensino Médio Incompleto" />
-                    <FormControlLabel value="FundamentalComp" control={<Radio />} label="Ensino Fundamental Completo" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
+        <div>
 
-            <FormControl component="fieldset">
-                <FormLabel component="legend">A quanto tempo trabalha na empresa?</FormLabel>
+            <div style={{ overflow: "hidden", marginLeft: "21%", marginTop: "3%", position: "absolute" }}>
+                <div style={{ backgroundColor: "#ddd9ce", marginLeft: "-21%" }} />
+                {renderRedirect()}
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Qual o seu nivel de Escolaridade</FormLabel>
+                    <br />
+                    <RadioGroup value={DemographicsQuestion1} onChange={handleChangeDemographics1}>
+                        <FormControlLabel value="SuperiorComp" control={<Radio />} label="Superior Completo" />
+                        <FormControlLabel value="SuperiorIncomp" control={<Radio />} label="Superior Incompleto" />
+                        <FormControlLabel value="MedioComp" control={<Radio />} label="Ensino Médio Completo" />
+                        <FormControlLabel value="MedioIncomp" control={<Radio />} label="Ensino Médio Incompleto" />
+                        <FormControlLabel value="FundamentalComp" control={<Radio />} label="Ensino Fundamental Completo" />
+                    </RadioGroup>
+                </FormControl>
                 <br />
-                <RadioGroup value={DemographicsQuestion2} onChange={handleChangeDemographics2}>
-                    <FormControlLabel value="20Plus" control={<Radio />} label="20 Mais" />
-                    <FormControlLabel value="10to20" control={<Radio />} label="10 - 20" />
-                    <FormControlLabel value="5to10" control={<Radio />} label="5 - 10" />
-                    <FormControlLabel value="1to5" control={<Radio />} label="1 - 5" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
+                <br />
 
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Idade?</FormLabel>
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">A quanto tempo trabalha na empresa?</FormLabel>
+                    <br />
+                    <RadioGroup value={DemographicsQuestion2} onChange={handleChangeDemographics2}>
+                        <FormControlLabel value="20Plus" control={<Radio />} label="20 Mais" />
+                        <FormControlLabel value="10to20" control={<Radio />} label="10 - 20" />
+                        <FormControlLabel value="5to10" control={<Radio />} label="5 - 10" />
+                        <FormControlLabel value="1to5" control={<Radio />} label="1 - 5" />
+                    </RadioGroup>
+                </FormControl>
                 <br />
-                <TextField value={DemographicsQuestion3} onChange={handleChangeDemographics3} />
-            </FormControl>
-            <br />
-            <br />
+                <br />
 
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Gênero</FormLabel>
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Idade?</FormLabel>
+                    <br />
+                    <TextField value={DemographicsQuestion3} onChange={handleChangeDemographics3} />
+                </FormControl>
                 <br />
-                <RadioGroup value={DemographicsQuestion4} onChange={handleChangeDemographics4}>
-                    <FormControlLabel value="male" control={<Radio />} label="Masculino" />
-                    <FormControlLabel value="female" control={<Radio />} label="Feminino" />
-                    <FormControlLabel value="others" control={<Radio />} label="Outros" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
+                <br />
 
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Por quanto tempo você deseja continuar trabalhando nessa empresa?</FormLabel>
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Gênero</FormLabel>
+                    <br />
+                    <RadioGroup value={DemographicsQuestion4} onChange={handleChangeDemographics4}>
+                        <FormControlLabel value="male" control={<Radio />} label="Masculino" />
+                        <FormControlLabel value="female" control={<Radio />} label="Feminino" />
+                        <FormControlLabel value="others" control={<Radio />} label="Outros" />
+                    </RadioGroup>
+                </FormControl>
                 <br />
-                <TextField value={DemographicsQuestion5} onChange={handleChangeDemographics5} />
-            </FormControl>
-            <br />
-            <br />
+                <br />
 
-            <div style={{ textAlign: "center" }}><b>Propósito</b></div>
-            <br />
-            <br />
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Por quanto tempo você deseja continuar trabalhando nessa empresa?</FormLabel>
+                    <br />
+                    <TextField value={DemographicsQuestion5} onChange={handleChangeDemographics5} />
+                </FormControl>
+                <br />
+                <br />
 
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Quando trabalho em grupo, geralmente utilizamos o propósito da empresa para tomar decisões?</FormLabel>
+                <div style={{ textAlign: "center" }}><b>Propósito</b></div>
                 <br />
-                <RadioGroup value={PurposeQuestion1} onChange={handleChangePurpose1}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-            <FormControl component="fieldset">
-                <FormLabel component="legend">A liderança claramente articula o propósito da empresa, que vai além do lucro?</FormLabel>
                 <br />
-                <RadioGroup value={PurposeQuestion2} onChange={handleChangePurpose2}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-            <FormControl component="fieldset">
-                <FormLabel component="legend"> O propósito da empresa é claro para todos os colabores na empresa?</FormLabel>
-                <br />
-                <RadioGroup value={PurposeQuestion3} onChange={handleChangePurpose3}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-            <div style={{ textAlign: "center" }}><b>Processo</b></div>
-            <br />
-            <br />
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Me sinto desafiado no meu ambiente de trabalho?</FormLabel>
-                <br />
-                <RadioGroup value={ProcessQuestion1} onChange={handleChangeProcess1}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Me sinto desafiado no meu ambiente de trabalho?</FormLabel>
-                <br />
-                <RadioGroup value={ProcessQuestion2} onChange={handleChangeProcess2}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Normalmente a empresa busca novas ideias com seus colaboradores?</FormLabel>
-                <br />
-                <RadioGroup value={ProcessQuestion3} onChange={handleChangeProcess3}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Com rapidez a empresa passa do conceito ao lançamento?</FormLabel>
-                <br />
-                <RadioGroup value={ProcessQuestion4} onChange={handleChangeProcess4}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Em geral, a empresa supera problemas rapidamente?</FormLabel>
-                <br />
-                <RadioGroup value={ProcessQuestion5} onChange={handleChangeProcess5}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Minha equipe tem liberdade para alterar processos organizacionais?</FormLabel>
-                <br />
-                <RadioGroup value={ProcessQuestion6} onChange={handleChangeProcess6}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Minha equipe sente-se confortável desafiando o status quo?</FormLabel>
-                <br />
-                <RadioGroup value={ProcessQuestion7} onChange={handleChangeProcess7}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Minha equipe sente-se confortável compartilhando ideias?</FormLabel>
-                <br />
-                <RadioGroup value={ProcessQuestion8} onChange={handleChangeProcess8}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-            <FormControl component="fieldset">
-                <FormLabel component="legend">As equipes estão conectadas aos tomadores de decisões finais?</FormLabel>
-                <br />
-                <RadioGroup value={ProcessQuestion9} onChange={handleChangeProcess9}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-            <FormControl component="fieldset">
-                <FormLabel component="legend">As equipes estão conectadas aos tomadores de decisões finais?</FormLabel>
-                <br />
-                <RadioGroup value={ProcessQuestion10} onChange={handleChangeProcess10}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
 
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Existem processos e recursos estabelecidos que fazem as novas ideias avançarem na empresa e todos tem acesso?</FormLabel>
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Quando trabalho em grupo, geralmente utilizamos o propósito da empresa para tomar decisões?</FormLabel>
+                    <br />
+                    <RadioGroup value={PurposeQuestion1} onChange={handleChangePurpose1}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
                 <br />
-                <RadioGroup value={ProcessQuestion11} onChange={handleChangeProcess11}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Há muitas barreiras para mudar as coisas na organização?</FormLabel>
                 <br />
-                <RadioGroup value={ProcessQuestion12} onChange={handleChangeProcess12}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-
-
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Os demais departamentos fazem esforços para serem parceiros úteis?</FormLabel>
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">A liderança claramente articula o propósito da empresa, que vai além do lucro?</FormLabel>
+                    <br />
+                    <RadioGroup value={PurposeQuestion2} onChange={handleChangePurpose2}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
                 <br />
-                <RadioGroup value={ProcessQuestion13} onChange={handleChangeProcess13}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-            <div style={{ textAlign: "center" }}><b>Espaço</b></div>
-
-            <br />
-            <br />
-
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Preciso fazer protótipos (p. ex., criar modelos digitais ou físicos ou esboçar ideias) para fazer meu trabalho?</FormLabel>
                 <br />
-                <RadioGroup value={SpaceQuestion1} onChange={handleChangeSpace1}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Nosso ambiente de trabalho é bom?</FormLabel>
+                <FormControl component="fieldset">
+                    <FormLabel component="legend"> O propósito da empresa é claro para todos os colabores na empresa?</FormLabel>
+                    <br />
+                    <RadioGroup value={PurposeQuestion3} onChange={handleChangePurpose3}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
                 <br />
-                <RadioGroup value={SpaceQuestion2} onChange={handleChangeSpace2}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Sinto-me energizado pelo espaço físico no qual trabalho?</FormLabel>
                 <br />
-                <RadioGroup value={SpaceQuestion3} onChange={handleChangeSpace3}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-
-            <div style={{ textAlign: "center" }}><b>Informaçōes</b></div>
-            <br />
-            <br />
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Os diferentes grupos compartilham informações entre si da forma necessária?</FormLabel>
+                <div style={{ textAlign: "center" }}><b>Processo</b></div>
                 <br />
-                <RadioGroup value={InformationQuestion1} onChange={handleChangeInformation1}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-
-            <FormControl component="fieldset">
-                <FormLabel component="legend">Consigo acessar informações de projetos passados com facilidade?</FormLabel>
                 <br />
-                <RadioGroup value={InformationQuestion2} onChange={handleChangeInformation2}>
-                    <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
-                    <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
-                    <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
-                    <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
-                    <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
-                </RadioGroup>
-            </FormControl>
-            <br />
-            <br />
-            <Button variant="contained" className="center" color="primary" onClick={saveOnDatabese}>
-                Primary
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Me sinto desafiado no meu ambiente de trabalho?</FormLabel>
+                    <br />
+                    <RadioGroup value={ProcessQuestion1} onChange={handleChangeProcess1}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
+                <br />
+                <br />
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Me sinto desafiado no meu ambiente de trabalho?</FormLabel>
+                    <br />
+                    <RadioGroup value={ProcessQuestion2} onChange={handleChangeProcess2}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
+                <br />
+                <br />
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Normalmente a empresa busca novas ideias com seus colaboradores?</FormLabel>
+                    <br />
+                    <RadioGroup value={ProcessQuestion3} onChange={handleChangeProcess3}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
+                <br />
+                <br />
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Com rapidez a empresa passa do conceito ao lançamento?</FormLabel>
+                    <br />
+                    <RadioGroup value={ProcessQuestion4} onChange={handleChangeProcess4}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
+                <br />
+                <br />
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Em geral, a empresa supera problemas rapidamente?</FormLabel>
+                    <br />
+                    <RadioGroup value={ProcessQuestion5} onChange={handleChangeProcess5}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
+                <br />
+                <br />
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Minha equipe tem liberdade para alterar processos organizacionais?</FormLabel>
+                    <br />
+                    <RadioGroup value={ProcessQuestion6} onChange={handleChangeProcess6}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
+                <br />
+                <br />
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Minha equipe sente-se confortável desafiando o status quo?</FormLabel>
+                    <br />
+                    <RadioGroup value={ProcessQuestion7} onChange={handleChangeProcess7}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
+                <br />
+                <br />
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Minha equipe sente-se confortável compartilhando ideias?</FormLabel>
+                    <br />
+                    <RadioGroup value={ProcessQuestion8} onChange={handleChangeProcess8}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
+                <br />
+                <br />
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">As equipes estão conectadas aos tomadores de decisões finais?</FormLabel>
+                    <br />
+                    <RadioGroup value={ProcessQuestion9} onChange={handleChangeProcess9}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
+                <br />
+                <br />
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">As equipes estão conectadas aos tomadores de decisões finais?</FormLabel>
+                    <br />
+                    <RadioGroup value={ProcessQuestion10} onChange={handleChangeProcess10}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
+                <br />
+                <br />
+
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Existem processos e recursos estabelecidos que fazem as novas ideias avançarem na empresa e todos tem acesso?</FormLabel>
+                    <br />
+                    <RadioGroup value={ProcessQuestion11} onChange={handleChangeProcess11}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
+                <br />
+                <br />
+
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Há muitas barreiras para mudar as coisas na organização?</FormLabel>
+                    <br />
+                    <RadioGroup value={ProcessQuestion12} onChange={handleChangeProcess12}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
+                <br />
+                <br />
+
+
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Os demais departamentos fazem esforços para serem parceiros úteis?</FormLabel>
+                    <br />
+                    <RadioGroup value={ProcessQuestion13} onChange={handleChangeProcess13}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
+                <br />
+                <br />
+                <div style={{ textAlign: "center" }}><b>Espaço</b></div>
+
+                <br />
+                <br />
+
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Preciso fazer protótipos (p. ex., criar modelos digitais ou físicos ou esboçar ideias) para fazer meu trabalho?</FormLabel>
+                    <br />
+                    <RadioGroup value={SpaceQuestion1} onChange={handleChangeSpace1}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
+                <br />
+                <br />
+
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Nosso ambiente de trabalho é bom?</FormLabel>
+                    <br />
+                    <RadioGroup value={SpaceQuestion2} onChange={handleChangeSpace2}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
+                <br />
+                <br />
+
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Sinto-me energizado pelo espaço físico no qual trabalho?</FormLabel>
+                    <br />
+                    <RadioGroup value={SpaceQuestion3} onChange={handleChangeSpace3}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
+                <br />
+                <br />
+
+                <div style={{ textAlign: "center" }}><b>Informaçōes</b></div>
+                <br />
+                <br />
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Os diferentes grupos compartilham informações entre si da forma necessária?</FormLabel>
+                    <br />
+                    <RadioGroup value={InformationQuestion1} onChange={handleChangeInformation1}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
+                <br />
+                <br />
+
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Consigo acessar informações de projetos passados com facilidade?</FormLabel>
+                    <br />
+                    <RadioGroup value={InformationQuestion2} onChange={handleChangeInformation2}>
+                        <FormControlLabel value="1" control={<Radio />} label="Nunca é verdade" />
+                        <FormControlLabel value="2" control={<Radio />} label="Na maioria das vezes não é verdade" />
+                        <FormControlLabel value="3" control={<Radio />} label="Às vezes é verdade, às vezes não" />
+                        <FormControlLabel value="4" control={<Radio />} label="Na maioria das vezes é verdade" />
+                        <FormControlLabel value="5" control={<Radio />} label="Sempre é verdade" />
+                    </RadioGroup>
+                </FormControl>
+                <br />
+                <br />
+                <Button variant="contained" className="center" color="primary" onClick={saveOnDatabese}>
+                    Primary
             </Button>
+            </div>
         </div>
     )
 

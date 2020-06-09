@@ -4,6 +4,7 @@ import { Route, Redirect } from 'react-router-dom';
 
 import AuthLayout from '../pages/_layouts/auth';
 import DefaultLayout from '../pages/_layouts/default';
+import {useAuth0} from '../react-auth0-spa';
 
 export default function RouteWrapper({
   component: Component,
@@ -11,19 +12,19 @@ export default function RouteWrapper({
   ...rest 
 }) {
 
-  const signed = false;
+  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
-  if(!signed && isPrivate){
-    console.log("Aqui1:" + signed);
+  if(!isAuthenticated && isPrivate){
+    console.log("Aqui1:" + isAuthenticated);
     return <Redirect to="/" />;
   }
 
-  if (signed && !isPrivate) {
-    console.log("Aqui2:" + signed);
+  if (isAuthenticated && !isPrivate) {
+    console.log("Aqui2:" + isAuthenticated);
     return <Redirect to="/dashboard" />;
   }
 
-  const Layout = signed ? AuthLayout : DefaultLayout;
+  const Layout = isAuthenticated ? AuthLayout : DefaultLayout;
 
   return <Route {...rest} render={props =>(
     <Layout>
