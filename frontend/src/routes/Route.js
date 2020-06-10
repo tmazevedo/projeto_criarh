@@ -4,19 +4,23 @@ import { Route, Redirect } from 'react-router-dom';
 
 import AuthLayout from '../pages/_layouts/auth';
 import DefaultLayout from '../pages/_layouts/default';
-import {useAuth0} from '../react-auth0-spa';
+import { useAuth0 } from '../react-auth0-spa';
 
 export default function RouteWrapper({
   component: Component,
   isPrivate,
-  ...rest 
+  ...rest
 }) {
 
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  const { isAuthenticated, loginWithRedirect, logout, loading } = useAuth0();
 
-  if(!isAuthenticated && isPrivate){
+  if (!isAuthenticated && isPrivate) {
     console.log("Aqui1:" + isAuthenticated);
     return <Redirect to="/" />;
+  }
+
+  if (loading) {
+    return <div>Loading...</div>;
   }
 
   if (isAuthenticated && !isPrivate) {
@@ -26,7 +30,7 @@ export default function RouteWrapper({
 
   const Layout = isAuthenticated ? AuthLayout : DefaultLayout;
 
-  return <Route {...rest} render={props =>(
+  return <Route {...rest} render={props => (
     <Layout>
       <Component {...props} />
     </Layout>
@@ -36,7 +40,7 @@ export default function RouteWrapper({
 RouteWrapper.propTypes = {
   isPrivate: PropTypes.bool,
   component: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
-  .isRequired,
+    .isRequired,
 };
 
 RouteWrapper.defaultProps = {
