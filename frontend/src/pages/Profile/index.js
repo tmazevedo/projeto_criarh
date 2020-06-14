@@ -4,6 +4,7 @@ import TextField from '@material-ui/core/TextField';
 // import { Container } from './styles';
 
 function Profile() {
+
   const { loading, user } = useAuth0();
 
   return (
@@ -16,24 +17,38 @@ function Profile() {
         <br />
         <br />
         <div style={{fontSize: '30px',textAlign: 'center'}}>
-          Editar perfil
+          Meu perfil
         </div>
         <br/>
         <hr style={{marginTop: '0.5em',marginLeft: '109px'}} width="500"/>
         <br/>
         <br/>
-        <div style={{ marginLeft: "62px" }}>
-          <b style={{ verticalAlign: '-11px' }}>Nome Completo</b>  <TextField style={{ boxSizing: 'border-box', border: "0.5px solid black" }} id="nameProfile" value={user.name} />
+        
+        <div style={{display:"flex", justifyContent:"center", width: "100%", height: "100%", paddingTop:10, paddingBottom:10}}>
+            <div style={{width: "165px", height: "50%"}}>
+              <img src={user.picture}
+              alt="imageProfile" style={{width: "100%"}} />
+            </div>
+
+            <div style={{width: "25%", height: "100%", flexDirection:"column"}}>
+              <div style={{ display:"flex", justifyContent:"flex-end", paddingTop: "2px", marginRight: 3 , height:"32px", alignItems:"center"}}>
+                <b>Nome Completo</b>  
+              </div>
+              <div style={{ display:"flex", justifyContent:"flex-end", paddingTop: "30px", marginRight: 3 , height:"32px", alignItems:"center"}}>
+                <b>Email</b>  
+              </div>
+              <div style={{ display:"flex", justifyContent:"flex-end", paddingTop: "45px", marginRight: 3 , height:"32px", alignItems:"center"}}>
+                <b>País</b>  
+              </div>
+            </div>
+
+            <div style={{width: "35%", height: "100%"}}>
+              <TextField style={{ paddingLeft: 5, boxSizing: 'border-box', border: "0.5px solid black", marginBottom: "12px" }} id="nameProfile" value={user.name} />
+              <TextField style={{ paddingLeft: 5, boxSizing: 'border-box', border: "0.5px solid black", marginBottom: "12px" }} id="nameProfile" value={user.email} />
+              <TextField style={{ paddingLeft: 5, boxSizing: 'border-box', border: "0.5px solid black", marginBottom: "12px" }} id="nameProfile" value={user.locale} />
+            </div>
         </div>
-
-        <img src={user.picture}
-          alt="imageProfile" style={{
-            borderRadius: '4px',
-            padding: '11px',
-            width: '150px',
-            margin: '70px',
-
-          }} />
+        
       </div>
     </div>
   );
