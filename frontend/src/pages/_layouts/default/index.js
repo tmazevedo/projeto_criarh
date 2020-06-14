@@ -4,7 +4,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 
 import FrontPageHeader from '../../../components/FrontPageHeader';
-import BlackFooter from '../../../components/BlackFooter';
+import BlackFooter from '../../../components/blackFooter';
 
 import { Wrapper } from './styles';
 
