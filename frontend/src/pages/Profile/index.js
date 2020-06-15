@@ -23,10 +23,6 @@ function Profile() {
         <hr style={{marginTop: '0.5em',marginLeft: '109px'}} width="500"/>
         <br/>
         <br/>
-<<<<<<< HEAD
-        
-=======
->>>>>>> master
         <div style={{display:"flex", justifyContent:"center", width: "100%", height: "100%", paddingTop:10, paddingBottom:10}}>
             <div style={{width: "165px", height: "50%"}}>
               <img src={user.picture}
@@ -35,17 +31,10 @@ function Profile() {
 
             <div style={{width: "25%", height: "100%", flexDirection:"column"}}>
               <div style={{ display:"flex", justifyContent:"flex-end", paddingTop: "2px", marginRight: 3 , height:"32px", alignItems:"center"}}>
-<<<<<<< HEAD
-                <b>Nome Completo</b>  
-              </div>
-              <div style={{ display:"flex", justifyContent:"flex-end", paddingTop: "30px", marginRight: 3 , height:"32px", alignItems:"center"}}>
-                <b>Email</b>  
-=======
                 <b>Nome Completo</b>
               </div>
               <div style={{ display:"flex", justifyContent:"flex-end", paddingTop: "30px", marginRight: 3 , height:"32px", alignItems:"center"}}>
                 <b>Email</b>
->>>>>>> master
               </div>
               <div style={{ display:"flex", justifyContent:"flex-end", paddingTop: "45px", marginRight: 3 , height:"32px", alignItems:"center"}}>
                 <b>País</b>  
