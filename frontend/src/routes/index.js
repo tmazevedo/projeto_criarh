@@ -10,6 +10,8 @@ import Dashboard from '../pages/Dashboard';
 import Profile from '../pages/Profile';
 import Forms from './../components/Forms/forms'
 import Chart from './../components/Chart/chart'
+import Admin from './../components/admin/admin'
+
 
 
 export default function Routes() {
@@ -18,6 +20,7 @@ export default function Routes() {
     <Switch>
       <Route path="/" exact component={SignIn} />
       <Route path="/register" component={SignUp} />
+      <Route path="/admin" component={Admin}/>
 
       <Route path="/dashboard" component={Dashboard} isPrivate />
       <Route path="/profile" component={Profile} isPrivate />
