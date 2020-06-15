@@ -15,7 +15,6 @@ export default function RouteWrapper({
   const { isAuthenticated, loginWithRedirect, logout, loading } = useAuth0();
 
   if (!isAuthenticated && isPrivate) {
-    console.log("Aqui1:" + isAuthenticated);
     return <Redirect to="/" />;
   }
 
@@ -24,7 +23,6 @@ export default function RouteWrapper({
   }
 
   if (isAuthenticated && !isPrivate) {
-    console.log("Aqui2:" + isAuthenticated);
     return <Redirect to="/dashboard" />;
   }
 

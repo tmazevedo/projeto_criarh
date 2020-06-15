@@ -37,13 +37,14 @@ const Menu = ({ open, ...props }) => {
           </ListItemIcon>
           <ListItemText primary="Dashboard" />
         </ListItem>
-
-        <ListItem button className={classes.menuItem}>
-          <ListItemIcon className={classes.menuItemIcon}>
-            <IconBarChart />
-          </ListItemIcon>
-          <ListItemText primary="Gráficos" />
-        </ListItem>
+        <Link to="/charts">
+          <ListItem button className={classes.menuItem}>
+            <ListItemIcon className={classes.menuItemIcon}>
+              <IconBarChart />
+            </ListItemIcon>
+            <ListItemText primary="Gráficos" />
+          </ListItem>
+        </Link>
         <Link to="/forms">
           <ListItem button className={classes.menuItem} >
             <ListItemIcon className={classes.menuItemIcon} >
