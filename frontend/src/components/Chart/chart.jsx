@@ -229,55 +229,59 @@ class charts extends React.Component {
                 <br />
                 <br />
                 <br />
-                <div style={{ backgroundColor: "#ffff", paddingTop: '10 %', width: '70%', margin: 'auto', overflow: 'visible', height: "67%" }}>
-                    <p style={{ textAlign: "center", fontSize: "16px" }}> <b>Processo</b> </p>
-                    <Chart
-                        chartType="ColumnChart"
-                        width="100%"
-                        height="250px"
-                        data={this.ShowChart("process")}
-                    />
-                    <br />
-                    <br />
-                    <p style={{ textAlign: "center", fontSize: "16px" }}> <b>Objetivo</b> </p>
-                    <Chart
-                        chartType="ColumnChart"
-                        width="100%"
-                        height="250px"
-                        data={this.ShowChart("purpose")}
-                    />
-                    <br />
-                    <br />
-                    <p style={{ textAlign: "center", fontSize: "16px" }}> <b>Spaço</b> </p>
-                    <Chart
-                        chartType="ColumnChart"
-                        width="100%"
-                        height="250px"
-                        data={this.ShowChart("space")}
-                    />
-                    <br />
-                    <br />
-                    <p style={{ textAlign: "center", fontSize: "16px" }}> <b>Demografia</b> </p>
-                    <Chart
-                        chartType="ColumnChart"
-                        width="100%"
-                        height="250px"
-                        data={this.ShowChartDemographicsSchoolLevel()}
-                    />
-                    <br />
-                    <Chart
-                        chartType="ColumnChart"
-                        width="100%"
-                        height="250px"
-                        data={this.ShowChartDemographicsTimeCompany()}
-                    />
-                    <br />
-                    <Chart
-                        chartType="ColumnChart"
-                        width="100%"
-                        height="250px"
-                        data={this.ShowChartDemographicsGender()}
-                    />
+                <div style={{ backgroundColor: "#ffff", paddingTop: "20", width: '90%', margin: 'auto', overflow: 'visible', height: "80%", display:"flex", flexDirection:"column" }}>
+                                
+                    <b style={{width:"100%", textAlign:"center", marginTop:30, fontSize:20}}>Demografia</b>
+
+                    <div style={{height:"255px", width:"100%", justifyContent: "center", display:"flex", flexDirection:"row"}}>
+                        <div style={{width:"26%", height:"100%"}}>
+                            <Chart
+                                chartType="ColumnChart"
+                                data={this.ShowChartDemographicsSchoolLevel()}
+                            />
+                        </div>
+                        <div style={{width:"26%", height:"100%"}}>
+                            <Chart
+                                chartType="ColumnChart"
+                                data={this.ShowChartDemographicsTimeCompany()}
+                            />
+                        </div>
+                        <div style={{width:"26%", height:"100%"}}>
+                            <Chart
+                                chartType="ColumnChart"
+                                data={this.ShowChartDemographicsGender()}
+                            />
+                        </div>
+                    </div>
+
+                    <div style={{width:"100%", justifyContent:"center", paddingTop:10, display:"flex", flexDirection:"row"}}>
+                        <b style={{width:"26%", textAlign:"center", fontSize:20}}>Espaço</b>
+                        <b style={{width:"26%", textAlign:"center", fontSize:20}}>Objetivo</b>
+                        <b style={{width:"26%", textAlign:"center", fontSize:20}}>Processo</b>
+                    </div>
+                    
+                    <div style={{height:"255px", width:"100%", justifyContent: "center", display:"flex", flexDirection:"row"}}>
+                        <div style={{width:"26%", height:"100%"}}>
+                            <Chart
+                                chartType="ColumnChart"
+                                data={this.ShowChart("space")}
+                            />
+                        </div>
+                        <div style={{width:"26%", height:"100%"}}>
+                            <Chart
+                                chartType="ColumnChart"
+                                data={this.ShowChart("purpose")}
+                            />
+                        </div>
+                        <div style={{width:"26%", height:"100%"}}>
+                            <Chart
+                                chartType="ColumnChart"
+                                data={this.ShowChart("process")}
+                            />
+                        </div>
+                    </div>
+
+                    
                 </div>
             </div>
         )
