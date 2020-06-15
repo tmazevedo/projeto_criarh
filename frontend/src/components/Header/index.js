@@ -2,11 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import logo from '../../assets/criarhLogo.png'
-
+import { useAuth0 } from '../../react-auth0-spa';
 import { Container, Content, Profile } from './styles';
 
 
+
+
 function Header() {
+  const { loading, user } = useAuth0();
+
   return (
     <Container>
       <Content>
@@ -18,13 +22,13 @@ function Header() {
         <aside>
           <Profile>
             <div>
-              <strong>Bianca Guerra</strong>
+              <strong>{user.name}</strong>
               <Link to="/profile">Meu Perfil</Link>
             </div>
             <img
-              src="https://api.adorable.io/avatars/50/abott@adorable.png"
-              alt="Bianca Guerra"
-              />
+              src={user.picture}
+              alt="Thiago Azevedo"
+            />
           </Profile>
         </aside>
 

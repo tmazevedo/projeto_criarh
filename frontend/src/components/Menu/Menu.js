@@ -17,9 +17,12 @@ import IconShoppingCart from '@material-ui/icons/ShoppingCart'
 import IconPeople from '@material-ui/icons/People'
 import IconBarChart from '@material-ui/icons/BarChart'
 import IconLibraryBooks from '@material-ui/icons/LibraryBooks'
+import ViewHeadlineIcon from '@material-ui/icons/ViewHeadline';
+import { Link } from 'react-router-dom';
+import { Button } from '@material-ui/core';
 
 const Menu = ({ open, ...props }) => {
-  
+
   const classes = useStyles()
   const isHidden = open ? true : false;
   const tabIndex = isHidden ? 0 : -1;
@@ -27,23 +30,32 @@ const Menu = ({ open, ...props }) => {
   return (
     <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
       <List component="nav" className={classes.appMenu} disablePadding>
-      
-      <ListItem button className={classes.menuItem}>
-        <ListItemIcon className={classes.menuItemIcon}>
-          <IconDashboard />
-        </ListItemIcon>
-        <ListItemText primary="Dashboard" />
-      </ListItem>
 
-      <ListItem button className={classes.menuItem}>
-        <ListItemIcon className={classes.menuItemIcon}>
-          <IconBarChart />
-        </ListItemIcon>
-        <ListItemText primary="Gráficos" />
-      </ListItem>
+        <ListItem button className={classes.menuItem}>
+          <ListItemIcon className={classes.menuItemIcon}>
+            <IconDashboard />
+          </ListItemIcon>
+          <ListItemText primary="Dashboard" />
+        </ListItem>
+        <Link to="/charts">
+          <ListItem button className={classes.menuItem}>
+            <ListItemIcon className={classes.menuItemIcon}>
+              <IconBarChart />
+            </ListItemIcon>
+            <ListItemText primary="Gráficos" />
+          </ListItem>
+        </Link>
+        <Link to="/forms">
+          <ListItem button className={classes.menuItem} >
+            <ListItemIcon className={classes.menuItemIcon} >
+              <ViewHeadlineIcon />
+            </ListItemIcon>
+            <ListItemText primary="Forms" />
+          </ListItem>
+        </Link>
 
       </List>
-     
+
       {/* <a href="/" tabIndex={tabIndex}>
         About us
       </a>
