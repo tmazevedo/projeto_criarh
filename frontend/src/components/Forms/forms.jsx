@@ -203,7 +203,7 @@ export default function Forms() {
             process: [ProcessQuestion1, ProcessQuestion2, ProcessQuestion3, ProcessQuestion4, ProcessQuestion5, ProcessQuestion6, ProcessQuestion7, ProcessQuestion8, ProcessQuestion9, ProcessQuestion10, ProcessQuestion11, ProcessQuestion12, ProcessQuestion13],
             space: [SpaceQuestion1, SpaceQuestion2, SpaceQuestion3],
             information: [InformationQuestion1, InformationQuestion2],
-            demographics: [DemographicsQuestion1, DemographicsQuestion2, DemographicsQuestion3, DemographicsQuestion4]
+            demographics: [DemographicsQuestion1, DemographicsQuestion2, DemographicsQuestion3, DemographicsQuestion4,DemographicsQuestion5]
         });
         setRedirect();
     }
