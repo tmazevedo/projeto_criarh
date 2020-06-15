@@ -230,7 +230,7 @@ class charts extends React.Component {
                 <br />
                 <br />
                 <div style={{ backgroundColor: "#ffff", paddingTop: "20", width: '90%', margin: 'auto', overflow: 'visible', height: "80%", display:"flex", flexDirection:"column" }}>
-                                
+
                     <b style={{width:"100%", textAlign:"center", marginTop:30, fontSize:20}}>Demografia</b>
 
                     <div style={{height:"255px", width:"100%", justifyContent: "center", display:"flex", flexDirection:"row"}}>
