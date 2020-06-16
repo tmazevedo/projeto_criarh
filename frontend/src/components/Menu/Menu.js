@@ -20,51 +20,62 @@ import IconLibraryBooks from '@material-ui/icons/LibraryBooks'
 import ViewHeadlineIcon from '@material-ui/icons/ViewHeadline';
 import { Link } from 'react-router-dom';
 import { Button } from '@material-ui/core';
+import { useAuth0 } from '../../react-auth0-spa';
 
 const Menu = ({ open, ...props }) => {
 
   const classes = useStyles()
   const isHidden = open ? true : false;
   const tabIndex = isHidden ? 0 : -1;
+  const { loading, user } = useAuth0();
 
   return (
     <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
       <List component="nav" className={classes.appMenu} disablePadding>
+        {user.email === "futebol.machado@gmail.com" && (
+          <div>
+            <Link to="/dashboard">
 
-        <ListItem button className={classes.menuItem}>
-          <ListItemIcon className={classes.menuItemIcon}>
-            <IconDashboard />
-          </ListItemIcon>
-          <ListItemText primary="Dashboard" />
-        </ListItem>
-        <Link to="/charts">
-          <ListItem button className={classes.menuItem}>
-            <ListItemIcon className={classes.menuItemIcon}>
-              <IconBarChart />
-            </ListItemIcon>
-            <ListItemText primary="Gráficos" />
-          </ListItem>
-        </Link>
-        <Link to="/forms">
-          <ListItem button className={classes.menuItem} >
-            <ListItemIcon className={classes.menuItemIcon} >
-              <ViewHeadlineIcon />
-            </ListItemIcon>
-            <ListItemText primary="Forms" />
-          </ListItem>
-        </Link>
+              <ListItem button className={classes.menuItem}>
+                <ListItemIcon className={classes.menuItemIcon}>
+                  <IconDashboard />
+                </ListItemIcon>
+                <ListItemText primary="Dashboard" />
+              </ListItem>
+            </Link>
+            <Link to="/charts">
+              <ListItem button className={classes.menuItem}>
+                <ListItemIcon className={classes.menuItemIcon}>
+                  <IconBarChart />
+                </ListItemIcon>
+                <ListItemText primary="Gráficos" />
+              </ListItem>
+            </Link>
+          </div>
+        )}
+        {user.email != "futebol.machado@gmail.com" && (
+          <div>
+            <Link to="/charts">
+              <ListItem button className={classes.menuItem}>
+                <ListItemIcon className={classes.menuItemIcon}>
+                  <IconBarChart />
+                </ListItemIcon>
+                <ListItemText primary="Gráficos" />
+              </ListItem>
+            </Link>
+            <Link to="/forms">
+              <ListItem button className={classes.menuItem} >
+                <ListItemIcon className={classes.menuItemIcon} >
+                  <ViewHeadlineIcon />
+                </ListItemIcon>
+                <ListItemText primary="Forms" />
+              </ListItem>
+            </Link>
+          </div>
+        )}
 
       </List>
 
-      {/* <a href="/" tabIndex={tabIndex}>
-        About us
-      </a>
-      <a href="/" tabIndex={tabIndex}>
-        Pricing
-        </a>
-      <a href="/" tabIndex={tabIndex}>
-        Contact
-        </a> */}
     </StyledMenu>
   )
 }

@@ -10,15 +10,28 @@ class charts extends React.Component {
         }
     }
 
+
     componentDidMount() {
-        var ref = firebase.database().ref("criarh");
-        ref.on('value', snapshot => {
-            this.setState({
-                data: (snapshot.val())
+
+        if (localStorage.getItem("company")) {
+            var ref = firebase.database().ref(localStorage.getItem("company"));
+            ref.on('value', snapshot => {
+                this.setState({
+                    data: (snapshot.val())
+                });
+            }, function (error) {
+                console.log("Error: " + error.code);
             });
-        }, function (error) {
-            console.log("Error: " + error.code);
-        });
+        } else {
+            var ref = firebase.database().ref("criarh");
+            ref.on('value', snapshot => {
+                this.setState({
+                    data: (snapshot.val())
+                });
+            }, function (error) {
+                console.log("Error: " + error.code);
+            });
+        }
     }
 
 
@@ -229,24 +242,24 @@ class charts extends React.Component {
                 <br />
                 <br />
                 <br />
-                <div style={{ backgroundColor: "#ffff", paddingTop: "20", width: '90%', margin: 'auto', overflow: 'visible', height: "80%", display:"flex", flexDirection:"column" }}>
+                <div style={{ backgroundColor: "#ffff", paddingTop: "20", width: '90%', margin: 'auto', overflow: 'visible', height: "80%", display: "flex", flexDirection: "column" }}>
 
-                    <b style={{width:"100%", textAlign:"center", marginTop:30, fontSize:20}}>Demografia</b>
+                    <b style={{ width: "100%", textAlign: "center", marginTop: 30, fontSize: 20 }}>Demografia</b>
 
-                    <div style={{height:"255px", width:"100%", justifyContent: "center", display:"flex", flexDirection:"row"}}>
-                        <div style={{width:"26%", height:"100%"}}>
+                    <div style={{ height: "255px", width: "100%", justifyContent: "center", display: "flex", flexDirection: "row" }}>
+                        <div style={{ width: "26%", height: "100%" }}>
                             <Chart
                                 chartType="ColumnChart"
                                 data={this.ShowChartDemographicsSchoolLevel()}
                             />
                         </div>
-                        <div style={{width:"26%", height:"100%"}}>
+                        <div style={{ width: "26%", height: "100%" }}>
                             <Chart
                                 chartType="ColumnChart"
                                 data={this.ShowChartDemographicsTimeCompany()}
                             />
                         </div>
-                        <div style={{width:"26%", height:"100%"}}>
+                        <div style={{ width: "26%", height: "100%" }}>
                             <Chart
                                 chartType="ColumnChart"
                                 data={this.ShowChartDemographicsGender()}
@@ -254,26 +267,26 @@ class charts extends React.Component {
                         </div>
                     </div>
 
-                    <div style={{width:"100%", justifyContent:"center", paddingTop:10, display:"flex", flexDirection:"row"}}>
-                        <b style={{width:"26%", textAlign:"center", fontSize:20}}>Espaço</b>
-                        <b style={{width:"26%", textAlign:"center", fontSize:20}}>Objetivo</b>
-                        <b style={{width:"26%", textAlign:"center", fontSize:20}}>Processo</b>
+                    <div style={{ width: "100%", justifyContent: "center", paddingTop: 10, display: "flex", flexDirection: "row" }}>
+                        <b style={{ width: "26%", textAlign: "center", fontSize: 20 }}>Espaço</b>
+                        <b style={{ width: "26%", textAlign: "center", fontSize: 20 }}>Objetivo</b>
+                        <b style={{ width: "26%", textAlign: "center", fontSize: 20 }}>Processo</b>
                     </div>
-                    
-                    <div style={{height:"255px", width:"100%", justifyContent: "center", display:"flex", flexDirection:"row"}}>
-                        <div style={{width:"26%", height:"100%"}}>
+
+                    <div style={{ height: "255px", width: "100%", justifyContent: "center", display: "flex", flexDirection: "row" }}>
+                        <div style={{ width: "26%", height: "100%" }}>
                             <Chart
                                 chartType="ColumnChart"
                                 data={this.ShowChart("space")}
                             />
                         </div>
-                        <div style={{width:"26%", height:"100%"}}>
+                        <div style={{ width: "26%", height: "100%" }}>
                             <Chart
                                 chartType="ColumnChart"
                                 data={this.ShowChart("purpose")}
                             />
                         </div>
-                        <div style={{width:"26%", height:"100%"}}>
+                        <div style={{ width: "26%", height: "100%" }}>
                             <Chart
                                 chartType="ColumnChart"
                                 data={this.ShowChart("process")}
@@ -281,7 +294,7 @@ class charts extends React.Component {
                         </div>
                     </div>
 
-                    
+
                 </div>
             </div>
         )
