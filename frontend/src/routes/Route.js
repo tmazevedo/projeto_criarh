@@ -12,7 +12,7 @@ export default function RouteWrapper({
   ...rest
 }) {
 
-  const { isAuthenticated, loginWithRedirect, logout, loading } = useAuth0();
+  const { isAuthenticated, loginWithRedirect, logout, loading, user } = useAuth0();
 
   if (!isAuthenticated && isPrivate) {
     return <Redirect to="/" />;
@@ -23,7 +23,13 @@ export default function RouteWrapper({
   }
 
   if (isAuthenticated && !isPrivate) {
-    return <Redirect to="/dashboard" />;
+    if (user.email === "futebol.machado@gmail.com") {
+      return <Redirect to="/dashboard" />;
+    }
+    else{
+      return <Redirect to="/forms" />;
+    }
+
   }
 
   const Layout = isAuthenticated ? AuthLayout : DefaultLayout;
